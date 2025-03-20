@@ -377,6 +377,7 @@
        donationForm.addEventListener('submit', (e) => {
            e.preventDefault();
            alert('Thank you for your donation! We appreciate your support.');
+            donationForm.reset();
        });
    }
    
