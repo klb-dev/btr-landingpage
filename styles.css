@@ -346,12 +346,6 @@ nav ul li a:hover::after {
     fill: #0496FF;
 }
 
-/* .events-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-} */
-
 .event-card {
     background-color: var(--light-color);
     border-radius: 10px;
@@ -696,9 +690,11 @@ nav ul li a:hover::after {
     color: var(--primary-dark)
 }
 
-.contact-item i {
-    font-size: 1.5rem;
-    color: var(--secondary-color);
+.contact-item svg {
+    font-size: 2rem;
+    color: var(--primary-color);
+    align-self: center;
+    margin-right: 0.75em;
 }
 
 .contact-text h3 {
@@ -708,7 +704,8 @@ nav ul li a:hover::after {
 }
 
 .contact-text p {
-    color: var(--dark-color);
+    color: var(--primary-color);
+    font-weight: 700;
 }
 
 .contact-form {
@@ -903,7 +900,11 @@ footer {
     }
     
     .hero h1 {
-        font-size: 2.5rem;
+        font-size: 2.25rem;
+    }
+
+    .hero h1 span {
+        font-size: 3rem;
     }
     
     .hero p {
@@ -927,15 +928,14 @@ footer {
         position: fixed;
         top: 0;
         right: -100%;
-        width: 70%;
+        width: 50%;
         height: 100vh;
-        background-color: white;
+        background-color: var(--light-color);
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         transition: all 0.5s ease;
-        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
     }
     
     nav.active {
@@ -950,10 +950,19 @@ footer {
     nav ul li {
         margin: 1.5rem 0;
     }
+
+    nav ul li a {
+        color: var(--primary-color);
+        font-size: 1.5rem;
+    }
     
     .mobile-menu {
         display: block;
-        z-index: 1001;
+        position: fixed;
+        top: 1rem;
+        right: 3rem;
+        z-index: 100;
+        
     }
     
     .bar {
@@ -967,6 +976,7 @@ footer {
     
     .mobile-menu.active .bar:nth-child(1) {
         transform: translateY(8px) rotate(45deg);
+        background-color: #ff0000;
     }
     
     .mobile-menu.active .bar:nth-child(2) {
@@ -975,12 +985,88 @@ footer {
     
     .mobile-menu.active .bar:nth-child(3) {
         transform: translateY(-8px) rotate(-45deg);
+        background-color: #ff0000;
+    }
+
+    .about-text span {
+        font-size: 1.5rem;
+    }
+
+    .about-text p {
+        font-size: 1.25rem;
+    }
+
+    .custom-shape-divider-bottom-1742331555 svg,
+    .custom-shape-divider-bottom-1742333600 svg,
+    .custom-shape-divider-bottom-1742331684 svg   {
+        position: relative;
+        display: block;
+        width: calc(100% + 1.3px);
+        height: 80px;
+        transform: rotateY(180deg);
+    }
+
+    .event-card {
+        width: 80%;
+    }
+
+    .contact-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contact-info {
+        flex-direction: column;
+        align-self: start;
+    }
+
+   .contact-item {
+        align-self: start;
+        padding-left: 4em;
+   }
+
+    .footer-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .footer-about {
+        text-align: center;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+
+    .footer-subscribe{
+        margin-top: 3rem;
+    }
+
+    .footer-bbd-logo {
+        width: 10%;
     }
 }
 
 @media (max-width: 480px) {
-    .hero h1 {
-        font-size: 2rem;
+    .hero-content h1 {
+        font-size: 1.25rem;
+    }
+
+    .hero-content h1 span {
+        display: block;
+        font-size: 1.5rem;
+        letter-spacing: 10px;
+    }
+
+    .about-content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .about-text {
+        align-items: ce;
     }
     
     .section {
@@ -993,5 +1079,21 @@ footer {
     
     .donation-amounts {
         flex-direction: column;
+    }
+
+    .contact-info svg {
+        align-self: center;
+    }
+
+    .custom-shape-divider-bottom-1742331555 svg,
+    .custom-shape-divider-bottom-1742333600 svg,
+    .custom-shape-divider-bottom-1742331684 svg,
+    .custom-shape-divider-bottom-1742329057 svg,
+    .custom-shape-divider-bottom-1742328735 svg {
+        position: relative;
+        display: block;
+        width: calc(100% + 1.3px);
+        height: 50px;
+        transform: rotateY(180deg);
     }
 }
