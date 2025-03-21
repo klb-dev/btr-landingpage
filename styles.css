@@ -279,28 +279,26 @@ nav ul li a:hover::after {
 .about-content {
     display: flex;
     align-items: center;
-    gap: 4rem;
-}
-
-.about-text {
-    flex: 1;
+    gap: 2rem;
 }
 
 .about-text h3 {
     font-family: var(--font-heading);
-    font-size: 2.25rem;
+    font-size: 2.75rem;
     margin-bottom: 1.5rem;
     color: var(--dark-color);
 }
 
+.about-text span {
+    font-size: 2.25rem;
+}
+
 .about-text p {
+    font-size: 1.75rem;
     margin-bottom: 1.9rem;
     color: var(--primary-dark);
 }
 
-.about-text span {
-    font-size: 1.9rem;
-}
 
 .about-image {
     flex: 1;
@@ -1081,9 +1079,10 @@ footer {
         flex-direction: column;
     }
 
-    .contact-info svg {
-        align-self: center;
+    .contact-item {
+        padding-left: 1.25em;
     }
+}
 
     .custom-shape-divider-bottom-1742331555 svg,
     .custom-shape-divider-bottom-1742333600 svg,
@@ -1096,4 +1095,3 @@ footer {
         height: 50px;
         transform: rotateY(180deg);
     }
-}
